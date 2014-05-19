@@ -161,6 +161,7 @@
 		C1D54D03192A4EEB009FC70D /* tab_address_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D54CFF192A4EEB009FC70D /* tab_address_normal@2x.png */; };
 		C1D54D04192A4EEB009FC70D /* tab_settings_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D54D00192A4EEB009FC70D /* tab_settings_normal@2x.png */; };
 		C1D54D05192A4EEB009FC70D /* tab_weixin_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D54D01192A4EEB009FC70D /* tab_weixin_normal@2x.png */; };
+		C1D54D07192A508F009FC70D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1D54D06192A508F009FC70D /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +367,7 @@
 		C1D54CFF192A4EEB009FC70D /* tab_address_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_address_normal@2x.png"; sourceTree = "<group>"; };
 		C1D54D00192A4EEB009FC70D /* tab_settings_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_settings_normal@2x.png"; sourceTree = "<group>"; };
 		C1D54D01192A4EEB009FC70D /* tab_weixin_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_weixin_normal@2x.png"; sourceTree = "<group>"; };
+		C1D54D06192A508F009FC70D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +520,7 @@
 		3251B2171920F72C0097ABE5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C1D54D06192A508F009FC70D /* icon@2x.png */,
 				C1D54CFE192A4EEB009FC70D /* mm_title_btn_menu_normal@2x.png */,
 				C1D54CFF192A4EEB009FC70D /* tab_address_normal@2x.png */,
 				C1D54D00192A4EEB009FC70D /* tab_settings_normal@2x.png */,
@@ -873,6 +876,7 @@
 				3251B2DD1920F72C0097ABE5 /* u_tab_shadow_select_meitu_1.png in Resources */,
 				3251B29D1920F72C0097ABE5 /* ic_preference_first_pressed.9.png in Resources */,
 				3251B2A61920F72C0097ABE5 /* load.png in Resources */,
+				C1D54D07192A508F009FC70D /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
