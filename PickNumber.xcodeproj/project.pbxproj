@@ -172,7 +172,7 @@
 /* Begin PBXFileReference section */
 		3246C2ED192A02B300480585 /* UIAlertView+PN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+PN.h"; sourceTree = "<group>"; };
 		3246C2EE192A02B300480585 /* UIAlertView+PN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+PN.m"; sourceTree = "<group>"; };
-		3251B1C51920C3780097ABE5 /* PickNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3251B1C51920C3780097ABE5 /* 宁波靓号.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "宁波靓号.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3251B1C81920C3780097ABE5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3251B1CA1920C3780097ABE5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3251B1CC1920C3780097ABE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -399,7 +399,7 @@
 		3251B1C61920C3780097ABE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3251B1C51920C3780097ABE5 /* PickNumber.app */,
+				3251B1C51920C3780097ABE5 /* 宁波靓号.app */,
 				3251B1E91920C3780097ABE5 /* PickNumberTests.xctest */,
 			);
 			name = Products;
@@ -693,7 +693,7 @@
 			);
 			name = PickNumber;
 			productName = PickNumber;
-			productReference = 3251B1C51920C3780097ABE5 /* PickNumber.app */;
+			productReference = 3251B1C51920C3780097ABE5 /* 宁波靓号.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3251B1E81920C3780097ABE5 /* PickNumberTests */ = {
@@ -721,7 +721,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = bruce;
+				ORGANIZATIONNAME = "Baowii Software";
 				TargetAttributes = {
 					3251B1E81920C3780097ABE5 = {
 						TestTargetID = 3251B1C41920C3780097ABE5;
@@ -1041,7 +1041,7 @@
 				INFOPLIST_FILE = "PickNumber/PickNumber-Info.plist";
 				OTHER_CFLAGS = "-I/usr/include/libxml2";
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "宁波靓号";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1056,7 +1056,7 @@
 				INFOPLIST_FILE = "PickNumber/PickNumber-Info.plist";
 				OTHER_CFLAGS = "-I/usr/include/libxml2";
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "宁波靓号";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
