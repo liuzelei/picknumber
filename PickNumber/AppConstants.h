@@ -8,3 +8,4 @@
 #define APP_ID @"0001"
 #define VERSION @"1.0"
 #define PAGECOUNT 50
+#define iOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 

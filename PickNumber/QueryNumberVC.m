@@ -13,6 +13,7 @@
 #import "PN_Params.h"
 #import "OrderListVC.h"
 #import "UIAlertView+PN.h"
+#import "AppConstants.h"
 @interface QueryNumberVC ()
 {
     NSDateFormatter *dateFormatter;
@@ -22,7 +23,7 @@
 
 @implementation QueryNumberVC
 
-@synthesize datePickerIsShowing_start,datePickerIsShowing_end;
+@synthesize datePickerIsShowing_start,datePickerIsShowing_end,date_picker_end,date_picker_start;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -32,24 +33,53 @@
     return self;
 }
 
+- (void)init_datepicker
+{
+    self.date_picker_start = [[UIDatePicker alloc] init];
+    self.date_picker_start.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+    self.date_picker_start.datePickerMode = UIDatePickerModeDate;
+    [self.date_picker_start setHidden:true];
+    [self.date_picker_start addTarget:self action:@selector(start_change:) forControlEvents:UIControlEventValueChanged];
+    
+    self.date_picker_end = [[UIDatePicker alloc] init];
+    self.date_picker_end.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+    self.date_picker_end.datePickerMode = UIDatePickerModeDate;
+    [self.date_picker_end setHidden:true];
+    [self.date_picker_end addTarget:self action:@selector(end_change:) forControlEvents:UIControlEventValueChanged];
+    self.date_picker_start.frame = CGRectMake(0, 0, 300, 162);
+    self.date_picker_end.frame = CGRectMake(0, 0, 300, 162);
+    [self.start_cell.contentView addSubview:self.date_picker_start];
+    [self.end_cell.contentView addSubview:self.date_picker_end];
+}
+
 - (void)setup {
     
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    
+    [self init_datepicker];
     NSTimeInterval secondsPerDay = 24 * 60 * 60;
     NSDate *start_date = [[NSDate alloc] initWithTimeIntervalSinceNow:-secondsPerDay*2];
     NSDate *end_date = [[NSDate alloc] initWithTimeIntervalSinceNow:secondsPerDay];
     self.lbl_start_date.text = [dateFormatter stringFromDate:start_date];
     self.lbl_end_date.text = [dateFormatter stringFromDate:end_date];
-}
+
+    }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setup];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
+
+
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.txt_no resignFirstResponder];
+    [self.txt_phone resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

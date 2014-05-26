@@ -42,15 +42,18 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 - (IBAction)btn_apply:(id)sender {
-    if ([self.lbl_packet.text isEqualToString: @""] || [self.txt_id_card.text isEqualToString:@""] || self.txt_id_card.text.length != 18) {
+    if ([self.txt_id_card.text isEqualToString:@""] || self.txt_id_card.text.length != 18) {
         UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"错误" message:@"请填写完整信息并确保身份证正确" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
         [alert_view show];
     }
     else
     {
         PNSoapBinding *pn = [PN PNSoapBinding];
-        PN_TELRequest *params = [PN_Params get_pn_tel_request_params:tel.tel id_card:self.txt_id_card.text company_name:self.txt_company_name.text custom_name:self.txt_custom_name.text pack_et:((ItemData *)self.lbl_packet.model).ivalue note:@""];
-        [pn TELRequestAsyncUsingParameters:params delegate:self];
+        PN_ItemQueryList *params = [PN_Params get_item_query_list_params:@"1"];
+        [pn ItemQueryListAsyncUsingParameters:params delegate:self];
+        
+//        PN_TELRequest *params = [PN_Params get_pn_tel_request_params:tel.tel id_card:self.txt_id_card.text company_name:self.txt_company_name.text custom_name:self.txt_custom_name.text pack_et:((ItemData *)self.lbl_packet.model).ivalue note:@""];
+//        [pn TELRequestAsyncUsingParameters:params delegate:self];
     }
 }
 
@@ -61,6 +64,16 @@
 }
 
 #pragma mark - Table view data source
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat height = self.tableView.rowHeight;
+    
+    if (indexPath.row == 0){
+        height =  0.0f;
+    }
+    return height;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row==0 ) {
@@ -96,7 +109,10 @@
             
             if ([body.ItemQueryListResult.Result integerValue] == 0) {
                 datas = [XmlParser load_item_datas:body.ItemQueryListResult.List];
-                [self push_number_filterVC:datas];
+                NSArray *array = [datas sortedArrayUsingComparator:[self get_comparator]];
+                PNSoapBinding *pn = [PN PNSoapBinding];
+                PN_TELRequest *params = [PN_Params get_pn_tel_request_params:tel.tel id_card:self.txt_id_card.text company_name:self.txt_company_name.text custom_name:self.txt_custom_name.text pack_et:((ItemData *)[array objectAtIndex:0]).ivalue note:@""];
+                [pn TELRequestAsyncUsingParameters:params delegate:self];
             }
             else
             {
@@ -148,5 +164,23 @@
         }
     }
     [self.navigationController popToViewController:object animated:YES];
+}
+
+-(NSComparator )get_comparator
+{
+    NSComparator cmptr = ^(ItemData *obj1,ItemData *obj2) {
+        
+        if ([obj1.ivalue integerValue] > [obj2.ivalue integerValue]) {
+            
+            return (NSComparisonResult)NSOrderedDescending;
+        }
+        if ([obj1.ivalue integerValue] < [obj2.ivalue integerValue]) {
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        return (NSComparisonResult)NSOrderedSame;
+        
+    };
+    
+    return cmptr;
 }
 @end

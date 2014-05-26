@@ -102,7 +102,7 @@
     pn_tel_query_list_params.Level = [NSNumber numberWithInteger:[level integerValue]];
 //    [NSNumber numberWithInteger:[level integerValue]>=0 ? [level integerValue] : 0 ];
     pn_tel_query_list_params.Feature = feature;
-    pn_tel_query_list_params.IncludeNum = include_num;
+    pn_tel_query_list_params.IncludeNum = include_num ==nil ? @"" : include_num;
     pn_tel_query_list_params.ExcludeNum = exclude_num ? @"4" : @"";
     pn_tel_query_list_params.IsArea = [NSNumber numberWithInteger:is_area ? 1 : 0];
     pn_tel_query_list_params.TELNum = [NSNumber numberWithInteger:PAGECOUNT];
@@ -140,8 +140,8 @@
     pn_tel_request_query_params.UserToken = [User current_user].token;
     pn_tel_request_query_params.BDate = start_date;
     pn_tel_request_query_params.EDate = end_date;
-    pn_tel_request_query_params.TEL = tel;
-    pn_tel_request_query_params.RNO = rno;
+    pn_tel_request_query_params.TEL = tel==nil ? @"" : tel;
+    pn_tel_request_query_params.RNO = rno==nil ? @"" : rno;
     pn_tel_request_query_params.RequestStatus = [NSNumber numberWithInteger:[status integerValue]];
     return pn_tel_request_query_params;
 }
