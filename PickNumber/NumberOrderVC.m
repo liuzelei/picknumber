@@ -69,9 +69,6 @@
     
     CGFloat height = self.tableView.rowHeight;
     
-    if (indexPath.row == 0){
-        height =  0.0f;
-    }
     return height;
 }
 
