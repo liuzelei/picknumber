@@ -46,8 +46,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row==0) {
         PNSoapBinding *pn = [PN PNSoapBinding];
-        PN_GetUserInfo *params = [PN_Params get_user_info_params];
-        [pn GetUserInfoAsyncUsingParameters:params delegate:self];
+        PN_GetUpdateInfo *params = [PN_Params get_update_info_params];
+        [pn GetUpdateInfoAsyncUsingParameters:params delegate:self];
     }
     else if(indexPath.row==1)
     {
@@ -62,9 +62,15 @@
     NSArray *responseBodyParts = response.bodyParts;
     
     for(id bodyPart in responseBodyParts) {
-        if([bodyPart isKindOfClass:[PN_GetUserInfoResponse class]]) {
-            PN_GetUserInfoResponse *body = (PN_GetUserInfoResponse*)bodyPart;
-            if ([body.GetUserInfoResult.Result integerValue] == 0) {
+        if ([bodyPart isKindOfClass:[SOAPFault class]]) {
+            // You can get the error like this:
+            NSLog(@"%@,%@",[bodyPart faultcode],[bodyPart faultstring]);
+            continue;
+        }
+        
+        if([bodyPart isKindOfClass:[PN_GetUpdateInfoResponse class]]) {
+            PN_GetUpdateInfoResponse *body = (PN_GetUpdateInfoResponse*)bodyPart;
+            if ([body.GetUpdateInfoResult.Result integerValue] == 0) {
                 UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"您的版本过低,请到AppStore升级"] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
                 [alert_view show];
             }

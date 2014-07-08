@@ -23,4 +23,5 @@
 +(PN_TelRequestQueryList *)get_pn_tel_request_query_list_params:(NSString *)start_date end_date:(NSString *)end_date tel:(NSString *)tel rno:(NSString *)rno status:(NSString *)status;
 +(PN_GetUserInfo *)get_user_info_params;
 +(PN_ChangePassword *)get_pn_change_password_params:(NSString *)old_password new_password:(NSString *)new_password;
++(PN_GetUpdateInfo *)get_update_info_params;
 @end

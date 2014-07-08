@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="qmo-Dg-2vS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="qmo-Dg-2vS">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -46,8 +46,8 @@
             <objects>
                 <viewController id="irP-Qt-Hrf" customClass="LoginVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="V7A-mo-AfR"/>
-                        <viewControllerLayoutGuide type="bottom" id="ng3-YR-nHS"/>
+                        <viewControllerLayoutGuide type="top" id="dpd-3A-lt1"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Zd-i6-EK1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k1U-sZ-sVF">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -362,7 +362,7 @@
                                                     <rect key="frame" x="100" y="11" width="200" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -384,7 +384,7 @@
                                                     <rect key="frame" x="100" y="11" width="200" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -433,8 +433,8 @@
             <objects>
                 <viewController storyboardIdentifier="NumberDVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8yJ-1O-u9j" customClass="NumberDVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UAS-oG-vVL"/>
-                        <viewControllerLayoutGuide type="bottom" id="in8-71-Tng"/>
+                        <viewControllerLayoutGuide type="top" id="5zm-FP-Teu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xmh-jr-xQj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0mw-LQ-Ac5">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -1019,8 +1019,8 @@
             <objects>
                 <viewController storyboardIdentifier="OrderDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CUV-vo-hWF" customClass="OrderDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fKX-5b-TWI"/>
-                        <viewControllerLayoutGuide type="bottom" id="s93-X2-u68"/>
+                        <viewControllerLayoutGuide type="top" id="cyA-3F-J8B"/>
+                        <viewControllerLayoutGuide type="bottom" id="zpH-e9-SGR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ScF-D7-bhC">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -1386,17 +1386,13 @@
             <objects>
                 <viewController storyboardIdentifier="AboutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Crm-yd-Q6r" customClass="AboutVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VUC-mX-b1i"/>
-                        <viewControllerLayoutGuide type="bottom" id="DJ6-3S-BOj"/>
+                        <viewControllerLayoutGuide type="top" id="TVh-Ti-e0e"/>
+                        <viewControllerLayoutGuide type="bottom" id="2NU-hy-SUe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Thj-xS-6Wx">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="b8S-fL-bdP">
-                                <rect key="frame" x="82" y="113" width="39" height="15"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="宁波电信" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8e-t4-qFD">
                                 <rect key="frame" x="129" y="122" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1418,6 +1414,10 @@
                                 <color key="textColor" red="0.47546635841836737" green="0.47546635841836737" blue="0.47546635841836737" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="FSx-3i-Rhp">
+                                <rect key="frame" x="85" y="107" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -2170,7 +2170,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon.png" width="72" height="72"/>
+        <image name="icon.png" width="36" height="36"/>
         <image name="mm_title_btn_menu_normal.png" width="40" height="40"/>
         <image name="tab_address_normal.png" width="50" height="42"/>
         <image name="tab_settings_normal.png" width="50" height="42"/>
