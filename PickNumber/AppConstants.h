@@ -6,6 +6,6 @@
 //  Copyright (c) 2014年 bruce. All rights reserved.
 //
 #define APP_ID @"0001"
-#define VERSION @"1.0"
+#define VERSION @"2.0"
 #define PAGECOUNT 50
 #define iOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 

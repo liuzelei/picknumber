@@ -41,7 +41,7 @@
     self.lbl_pre_deposit.text = [@(tel.pre_deposit) stringValue];
     self.lbl_star_num.text = [@(tel.star_num) stringValue];
     self.lbl_status.text = tel.status;
-    self.lbl_group_num.text = [NSString stringWithFormat:@"或%@",[@(tel.group_num) stringValue]];
+    self.lbl_group_num.text = [@(tel.group_num) stringValue];
     self.lbl_month_num.text = [@(tel.month_num) stringValue];
     self.lbl_feature.text = tel.input_feature;
     self.lbl_input_area.text = tel.input_area;
