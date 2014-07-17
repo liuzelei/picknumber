@@ -45,10 +45,24 @@
 
 
 - (IBAction)btn_apply:(id)sender {
+    NSString *str = self.txt_id_card.text;
+    bool flag = true;
+    for(int i=0; i< [str length];i++){
+        int a = [str characterAtIndex:i];
+        if( a > 0x4e00 && a < 0x9fff)
+        {
+            UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"证件号不能包含汉字"] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+            [alert_view show];
+            flag = false;
+            break;
+        }
+    }
+    if (flag) {
         PNSoapBinding *pn = [PN PNSoapBinding];
         PN_ItemQueryList *params = [PN_Params get_item_query_list_params:@"1"];
         [pn ItemQueryListAsyncUsingParameters:params delegate:self];
-//        PN_TELRequest *params = [PN_Params get_pn_tel_request_params:tel.tel id_card:self.txt_id_card.text company_name:self.txt_company_name.text custom_name:self.txt_custom_name.text pack_et:((ItemData *)self.lbl_packet.model).ivalue note:@""];
+    }
+        //        PN_TELRequest *params = [PN_Params get_pn_tel_request_params:tel.tel id_card:self.txt_id_card.text company_name:self.txt_company_name.text custom_name:self.txt_custom_name.text pack_et:((ItemData *)self.lbl_packet.model).ivalue note:@""];
 //        [pn TELRequestAsyncUsingParameters:params delegate:self];
 }
 

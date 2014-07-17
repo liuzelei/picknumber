@@ -50,6 +50,7 @@
     
 }
 - (IBAction)btn_next:(id)sender {
+    
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     NumberOrderVC *novc = [storyboard instantiateViewControllerWithIdentifier:@"NumberOrderVC"];
     novc.tel = tel;
