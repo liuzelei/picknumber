@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320C120F197793FA000B895C /* androidsr.png in Resources */ = {isa = PBXBuildFile; fileRef = 320C120E197793FA000B895C /* androidsr.png */; };
+		3237DC631977811600CDE05F /* ipa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3237DC621977811600CDE05F /* ipa.png */; };
 		3246C2EF192A02B300480585 /* UIAlertView+PN.m in Sources */ = {isa = PBXBuildFile; fileRef = 3246C2EE192A02B300480585 /* UIAlertView+PN.m */; };
 		3251B1C91920C3780097ABE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3251B1C81920C3780097ABE5 /* Foundation.framework */; };
 		3251B1CB1920C3780097ABE5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3251B1CA1920C3780097ABE5 /* CoreGraphics.framework */; };
@@ -175,6 +177,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		320C120E197793FA000B895C /* androidsr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = androidsr.png; path = ../../../../../../../../Downloads/androidsr.png; sourceTree = "<group>"; };
+		3237DC621977811600CDE05F /* ipa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipa.png; path = ../../../../../../../../Downloads/ipa.png; sourceTree = "<group>"; };
 		3246C2ED192A02B300480585 /* UIAlertView+PN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+PN.h"; sourceTree = "<group>"; };
 		3246C2EE192A02B300480585 /* UIAlertView+PN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+PN.m"; sourceTree = "<group>"; };
 		3251B1C51920C3780097ABE5 /* 宁波靓号.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "宁波靓号.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -520,6 +524,8 @@
 		3251B2171920F72C0097ABE5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				320C120E197793FA000B895C /* androidsr.png */,
+				3237DC621977811600CDE05F /* ipa.png */,
 				C1D54D06192A508F009FC70D /* icon1.png */,
 				C1D54CFE192A4EEB009FC70D /* mm_title_btn_menu_normal@2x.png */,
 				C1D54CFF192A4EEB009FC70D /* tab_address_normal@2x.png */,
@@ -739,7 +745,7 @@
 				ORGANIZATIONNAME = "Baowii Software";
 				TargetAttributes = {
 					3251B1C41920C3780097ABE5 = {
-						DevelopmentTeam = AY44DUPKRF;
+						DevelopmentTeam = PZ3NT9UCEJ;
 					};
 					3251B1E81920C3780097ABE5 = {
 						TestTargetID = 3251B1C41920C3780097ABE5;
@@ -824,6 +830,7 @@
 				3251B2BC1920F72C0097ABE5 /* mm_title_btn_focused.9.png in Resources */,
 				3251B2D41920F72C0097ABE5 /* tab_find_frd_pressed.png in Resources */,
 				3251B1D31920C3780097ABE5 /* InfoPlist.strings in Resources */,
+				3237DC631977811600CDE05F /* ipa.png in Resources */,
 				3251B2951920F72C0097ABE5 /* filter_button_focused.png in Resources */,
 				3251B27E1920F72C0097ABE5 /* bg_tab_info_selected.9.png in Resources */,
 				3251B2E21920F72C0097ABE5 /* whatsnew_btn_normal.9.png in Resources */,
@@ -839,6 +846,7 @@
 				3251B2DC1920F72C0097ABE5 /* u_tab_shadow_select.png in Resources */,
 				3251B2B11920F72C0097ABE5 /* mm_listitem_grey_normal.9.png in Resources */,
 				3251B2BD1920F72C0097ABE5 /* mm_title_btn_keyboard_normal.png in Resources */,
+				320C120F197793FA000B895C /* androidsr.png in Resources */,
 				3251B2AC1920F72C0097ABE5 /* menu_bg.9.png in Resources */,
 				3251B28D1920F72C0097ABE5 /* btn_style_two_pressed.9.png in Resources */,
 				3251B2C41920F72C0097ABE5 /* more_login_background.png in Resources */,
@@ -1059,7 +1067,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PickNumber/PickNumber-Prefix.pch";
@@ -1079,7 +1087,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PickNumber/PickNumber-Prefix.pch";

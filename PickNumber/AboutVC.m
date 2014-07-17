@@ -7,8 +7,9 @@
 //
 
 #import "AboutVC.h"
-
+#import "AppConstants.h"
 @interface AboutVC ()
+@property (weak, nonatomic) IBOutlet UILabel *lbl_version;
 
 @end
 
@@ -27,6 +28,7 @@
 {
     [super viewDidLoad];
     self.title = @"关于";
+//    self.lbl_version.text = [NSString stringWithFormat:@"当年版本:%@",VERSION];
 //    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"splash.png"]];
     // Do any additional setup after loading the view.
 }
