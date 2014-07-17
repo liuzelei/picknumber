@@ -10,7 +10,7 @@
 #import "PN_Params.h"
 #import "PN.h"
 #import "AboutVC.h"
-#import "UpdateVersionVC.h"
+
 
 @interface MoreVC ()
 {
