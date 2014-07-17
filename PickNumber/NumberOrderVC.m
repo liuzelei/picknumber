@@ -131,7 +131,7 @@
             
             if ([body.TELRequestResult.Result integerValue] == 0) {
                 
-                UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"号码申请成功，请在CRM建单后打电话给集中业务处理中心处理,申请单号为:%@",body.TELRequestResult.RNO] delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"提示" message:body.TELRequestResult.ErrorDescription delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
                 [alert_view show];
             }
             else
