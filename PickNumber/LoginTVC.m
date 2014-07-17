@@ -13,7 +13,9 @@
 #import "UIAlertView+PN.h"
 #import "XmlParser.h"
 @interface LoginTVC ()
-
+{
+    NSString *url;
+}
 @end
 
 @implementation LoginTVC
@@ -90,6 +92,12 @@
                 self.navigationController.navigationBarHidden=YES;
                 [self.navigationController pushViewController:obj animated:YES];
             }
+            else if([body.LoginResult.Result integerValue] == -10)
+            {
+                self->url = body.LoginResult.ErrorDescription;
+                UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"您的当前版本过低,必须升级.请点击确认升级."] delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                [alert_view show];
+            }
             else
             {
                 [UIAlertView show_msg:body.LoginResult.ErrorDescription];
@@ -123,4 +131,8 @@
     [userDefaults setObject:userDict forKey:@"user"];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self->url]];
+}
 @end

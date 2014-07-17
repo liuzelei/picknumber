@@ -10,8 +10,12 @@
 #import "PN_Params.h"
 #import "PN.h"
 #import "AboutVC.h"
-@interface MoreVC ()
+#import "UpdateVersionVC.h"
 
+@interface MoreVC ()
+{
+    NSString *url;
+}
 @end
 
 @implementation MoreVC
@@ -71,7 +75,8 @@
         if([bodyPart isKindOfClass:[PN_GetUpdateInfoResponse class]]) {
             PN_GetUpdateInfoResponse *body = (PN_GetUpdateInfoResponse*)bodyPart;
             if ([body.GetUpdateInfoResult.Result integerValue] == 0) {
-                UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"您的版本过低,请到AppStore升级"] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                self->url = body.GetUpdateInfoResult.URL;
+                UIAlertView *alert_view = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"您的当前版本过低,必须升级.请点击确认升级."] delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
                 [alert_view show];
             }
             else
@@ -84,5 +89,9 @@
 }
 
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self->url]];
+}
 
 @end

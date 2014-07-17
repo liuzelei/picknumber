@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "PN.h"
-@interface MoreVC : UITableViewController<PNSoapBindingResponseDelegate>
+@interface MoreVC : UITableViewController<PNSoapBindingResponseDelegate,UIAlertViewDelegate>
 
 @end
