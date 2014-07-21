@@ -745,7 +745,7 @@
 				ORGANIZATIONNAME = "Baowii Software";
 				TargetAttributes = {
 					3251B1C41920C3780097ABE5 = {
-						DevelopmentTeam = PZ3NT9UCEJ;
+						DevelopmentTeam = AY44DUPKRF;
 					};
 					3251B1E81920C3780097ABE5 = {
 						TestTargetID = 3251B1C41920C3780097ABE5;
